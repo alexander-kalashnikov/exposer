@@ -152,27 +152,7 @@ void EXTI1_IRQHandler(void) {
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 
-	/*if (GPIO_Pin == ENCODER_BUTTON) {
-
-	 if (HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_RESET) {
-
-	 tEncoderButtonPressedTicks = HAL_GetTick();
-
-	 } else {
-
-	 TicksDiff = HAL_GetTick() - tEncoderButtonPressedTicks;
-
-	 if ( TicksDiff > 50 && TicksDiff < 2000 ) {
-	 if (f_States & 0x1) {
-	 StopExposer();
-	 } else {
-	 StartExposer();
-	 }
-	 } else
-	 tEncoderButtonPressedTicks = HAL_GetTick();
-	 }
-
-	 } else*/if (GPIO_Pin == BUTTON_1_PIN) {
+	if (GPIO_Pin == BUTTON_1_PIN) {
 
 		if (HAL_GPIO_ReadPin(GPIOA, BUTTON_1_PIN)) {
 

@@ -1,3 +1,9 @@
+/*
+ * Some lib found in the Internet.
+ * Have no idea who did that anyway.
+ * But, thank you!!!
+ * */
+
 #include "tm1637.h"
 #include "main.h"
 #include "stm32f1xx_hal.h"

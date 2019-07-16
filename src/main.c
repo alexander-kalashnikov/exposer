@@ -14,7 +14,7 @@
 
 /*
  * Ongoing Issues
- * 1. Display initialization fucked in current tm1637 lib if gcc optimizations enabled.
+ * 1. Display initialization fucked in currently used tm1637 lib if gcc optimizations enabled.
  * SOLUTION: Use different library
  * */
 
@@ -206,8 +206,6 @@ void InitializeDisplay() {
 
 void InitializeInterrupts() {
 
-	//HAL_NVIC_SetPriority(EXTI15_10_IRQn, 1, 1);
-	//HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 	HAL_NVIC_SetPriority(EXTI1_IRQn, 1, 2);
 	HAL_NVIC_EnableIRQ(EXTI1_IRQn);
 	HAL_NVIC_SetPriority(TIM1_CC_IRQn, 2, 0);
